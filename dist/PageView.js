@@ -42,13 +42,18 @@ var PageView = function (_React$Component) {
           cssClassName = this.props.activeClassName;
         }
       }
+      
+      var href = '';
+      if(this.props.getHref) {
+        href = this.props.getHref(this.props.page);
+      }
 
       return _react2.default.createElement(
         'li',
         { className: cssClassName },
         _react2.default.createElement(
           'a',
-          _extends({}, this.props, { href: '', className: linkClassName }),
+          _extends({}, this.props, { href: href, className: linkClassName }),
           this.props.page
         )
       );
