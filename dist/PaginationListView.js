@@ -72,6 +72,7 @@ var PaginationListView = function (_Component) {
           page = _index + 1;
 
           var pageView = _react2.default.createElement(_PageView2.default, {
+            getHref: this.props.getHref,
             onClick: this.props.onPageSelected.bind(null, _index),
             selected: this.props.selected === _index,
             pageClassName: this.props.pageClassName,
