@@ -111,6 +111,7 @@ var PaginationBoxView = function (_Component) {
           'li',
           null,
           _react2.default.createElement(_PaginationListView2.default, {
+            getHref: this.props.getHref,
             onPageSelected: this.handlePageSelected,
             selected: this.state.selected,
             pageNum: this.props.pageNum,
